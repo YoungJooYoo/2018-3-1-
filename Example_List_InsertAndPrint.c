@@ -1,10 +1,14 @@
-/* 학번 및 이름 : 2016101453 컴퓨터학부 유영주		 			                       */
-/* 목적 및 개요:  과제1<배열수행>							                           */
-/* 과제수행날짜: 2018.03.01(목)					                                      */	                               
-/* 이슈: Visual Studio 2017이 보안상 bufferoverflow 위험성으로 인한 함수사용을 제한,  */
-/*	    따라서 #pragma warning(disable: 4996) 사용하여 컴파일 에러 무시적용	          */
-/* 프로그램 작성환경 및 실행환경: OS: Window's 10   IDE: Visual Studio 2017          */
-/* 사용언어: C언어															         */
+/*
++학번 및 이름 : 2016101453 컴퓨터학부 유영주		 			                       
+* 목적 및 개요:  과제1<배열수행>							                           
+* 과제수행날짜: 2018.03.01(목)					                                                                     
+* 이슈: 1)Visual Studio 2017이 보안상 bufferoverflow 위험성으로 인한 함수사용을 제한,  
+*	    따라서 #pragma warning(disable: 4996) 사용하여 컴파일 에러 무시적용	     
+		2) 윈도우 10 PC에서 같은 코드로 실행이 잘되나, 맥북 VM-Win10에서  "new_node = malloc(sizeof(node));" 부분에서 에러가난다. 이유를 모르겠다.
+* 프로그램 작성환경 및 실행환경: OS: Window's 10   IDE: Visual Studio 2017          
+* 사용언어: C언어	
+
+*/
 
 #pragma warning(disable: 4996) // scanf 에러 무시를 위해 경고 무시를 추가.
 
@@ -32,6 +36,7 @@ main()
 	new_node = malloc(sizeof(struct node));
 	if (new_node == NULL) {
 		printf("memory allocation error\n\n");
+
 	};
 
 
