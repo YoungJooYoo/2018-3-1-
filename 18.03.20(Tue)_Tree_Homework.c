@@ -63,28 +63,29 @@ int main(int argc, const char * argv[]){
     r2->rchild = r5;
     r3->rchild = r7;
     
-    printf("root의 주소 =%d, root의 가족data = %s\n", &root, root->male);
-    printf("root의 주소 =%d, root의 가족data2 = %s\n\n", &root, root->female);
-    temp = root;
+    printf("아버지(root)의 주소 =%d, root의 가족data = %s\n", &root, root->male);
+    printf("어머니(root)의 주소 =%d, root의 가족data2 = %s\n\n", &root, root->female);
+    
+    temp = root; // 왼쪽 노드를 탐색
     temp = temp->lchild;
     
-    printf("root의 lchild의 주소 =%d,  가족data = %s\n", &temp, temp->male);
-    printf("root의 lchild의 주소 =%d,  가족data2 = %s\n\n", &temp, temp->female);
+    printf("아들1(lchild)의 주소 =%d,  가족data = %s\n", &temp, temp->male);
+    printf("아들1 빈공간(lchild)의 주소 =%d,  가족data2 = %s\n\n", &temp, temp->female);
     
-    printf("B 데이터의 lchild의 주소 =%d, 가족data = %s\n", &temp->lchild, temp->lchild->male);
-    printf("B 데이터의 lchild의 주소 =%d, 가족data2 = %s\n", &temp->lchild, temp->lchild->female);
-    printf("B 데이터의 rchild의 주소 =%d, 가족data = %s\n", &temp->rchild, temp->rchild->male);
-    printf("B 데이터의 rchild의 주소 =%d, 가족data2 = %s\n\n", &temp->rchild, temp->rchild->female);
+    printf("손자1 데이터의 lchild의 주소 =%d, 가족data = %s\n", &temp->lchild, temp->lchild->male);
+    printf("손자1 빈공간 lchild의 주소 =%d, 가족data2 = %s\n", &temp->lchild, temp->lchild->female);
+    printf("손자2 데이터의 rchild의 주소 =%d, 가족data = %s\n", &temp->rchild, temp->rchild->male);
+    printf("손자2 빈공간 rchild의 주소 =%d, 가족data2 = %s\n\n", &temp->rchild, temp->rchild->female);
     
-    temp = root;
+    temp = root;   //오른쪽 노드를 탐색
     temp = temp->rchild;
     
-    printf("root의 rchild의 주소 =%d,  가족data = %s\n", &temp, temp->male);
-    printf("root의 rchild의 주소 =%d,  가족data2 = %s\n\n", &temp, temp->female);
+    printf("아들2(rchild)의 주소 =%d,  가족data = %s\n", &temp, temp->male);
+    printf("아들2(rchild)의 빈공간주소 =%d,  가족data2 = %s\n\n", &temp, temp->female);
     
-    printf("C 데이터의 lchild의 주소 =%d, 가족data = %s\n", &temp->lchild, temp->lchild);
-    printf("C 데이터의 rchild의 주소 =%d, 가족data2 = %s\n", &temp->rchild, temp->rchild->male);
-    printf("C 데이터의 rchild의 주소 =%d, 가족data2 = %s\n", &temp->rchild, temp->rchild->female);
+    printf("아들2에 이어진 그냥 빈공간 데이터의 lchild의 주소 =%d, 가족data = %s\n", &temp->lchild, temp->lchild);
+    printf("손자3(아들2의 아들) rchild의 주소 =%d, 가족data2 = %s\n", &temp->rchild, temp->rchild->male);
+    printf("손자3(아들2의 아들) 빈공간rchild의 주소 =%d, 가족data2 = %s\n", &temp->rchild, temp->rchild->female);
     
     printf("\n");
     //system("pause");
