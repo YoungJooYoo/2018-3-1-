@@ -4,6 +4,7 @@
  * 과제수행날짜: 2018.05.16(수)
  * 프로그램 특징: 그래프의 깊이우선 탐색과, 너비우선 탐색 구현  1.DFS(깊이우선탐색) 연결리스트로 구현
  * 사용언어: C언어
+ * 참고자료 : https://www.thecrazyprogrammer.com/2014/03/depth-first-search-dfs-traversal-of-a-graph.html
  * 프로그램 작성환경 및 실행환경:
  *   OS: OSX High Sierra 10.13.4
  *   IDE: Xcode 9.3
